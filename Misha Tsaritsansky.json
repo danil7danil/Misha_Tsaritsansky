@@ -29,7 +29,7 @@
       {"protocol": "freedom","tag": "direct"},
       {"protocol": "blackhole","tag": "block"}
     ],
-    "remarks": "🔒 Миша Царицанский    🇺🇸 США"
+    "remarks": "Миша Царицанский    США"
   },
   {
     "log": {"loglevel": "warning"},
@@ -61,7 +61,7 @@
       {"protocol": "freedom","tag": "direct"},
       {"protocol": "blackhole","tag": "block"}
     ],
-    "remarks": "🔒 Миша Царицанский    🇩🇪  Германия"
+    "remarks": "Миша Царицанский    Германия"
   },
   {
     "log": {"loglevel": "warning"},
@@ -82,9 +82,7 @@
     "outbounds": [
       {
         "protocol": "vless",
-        "settings": {"vnext": [{"address": "95.163.250.91","port": 443,"users": [{"id": "a1adf105-b92b-4a55-9211-936bf02dd16b","encryption":
-
- "none","flow": "xtls-rprx-vision"}]}]},
+        "settings": {"vnext": [{"address": "95.163.250.91","port": 443,"users": [{"id": "a1adf105-b92b-4a55-9211-936bf02dd16b","encryption": "none","flow": "xtls-rprx-vision"}]}]},
         "streamSettings": {
           "network": "tcp",
           "security": "reality",
@@ -95,6 +93,6 @@
       {"protocol": "freedom","tag": "direct"},
       {"protocol": "blackhole","tag": "block"}
     ],
-    "remarks": "🔒 Миша Царицанский ОБХОД БЕЛЫХ СПИСКОВ"
+    "remarks": "Миша Царицанский ОБХОД БЕЛЫХ СПИСКОВ"
   }
 ]
