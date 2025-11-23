@@ -1,0 +1,100 @@
+[
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"servers": ["8.8.8.8"]},
+    "stats": {},
+    "policy": {"levels": {"8": {"handshake": 4,"connIdle": 300,"uplinkOnly": 2,"downlinkOnly": 5}},"system": {"statsOutboundUplink": true,"statsOutboundDownlink": true}},
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {"type": "field","domain": ["geosite:private","geosite:cn"],"outboundTag": "direct"},
+        {"type": "field","ip": ["geoip:private","geoip:cn"],"outboundTag": "direct"}
+      ]
+    },
+    "inbounds": [
+      {"port": 10808,"listen": "127.0.0.1","protocol": "socks","settings": {"auth": "noauth","udp": true},"sniffing": {"enabled": true,"destOverride": ["http","tls"]},"tag": "socks"},
+      {"port": 10809,"listen": "127.0.0.1","protocol": "http","tag": "http"}
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {"vnext": [{"address": "us01-vlr01.tcp-reset-club.net","port": 443,"users": [{"id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8","encryption": "none","flow": "xtls-rprx-vision"}]}]},
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {"fingerprint": "chrome","publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg","serverName": "hls-svod.itunes.apple.com","shortId": "f79448a30d","spiderX": "/"}
+        },
+        "tag": "proxy"
+      },
+      {"protocol": "freedom","tag": "direct"},
+      {"protocol": "blackhole","tag": "block"}
+    ],
+    "remarks": "🔒 Миша Царицанский    🇺🇸 США"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"servers": ["8.8.8.8"]},
+    "stats": {},
+    "policy": {"levels": {"8": {"handshake": 4,"connIdle": 300,"uplinkOnly": 2,"downlinkOnly": 5}},"system": {"statsOutboundUplink": true,"statsOutboundDownlink": true}},
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {"type": "field","domain": ["geosite:private","geosite:cn"],"outboundTag": "direct"},
+        {"type": "field","ip": ["geoip:private","geoip:cn"],"outboundTag": "direct"}
+      ]
+    },
+    "inbounds": [
+      {"port": 10808,"listen": "127.0.0.1","protocol": "socks","settings": {"auth": "noauth","udp": true},"sniffing": {"enabled": true,"destOverride": ["http","tls"]},"tag": "socks"},
+      {"port": 10809,"listen": "127.0.0.1","protocol": "http","tag": "http"}
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {"vnext": [{"address": "de01-vlr01.tcp-reset-club.net","port": 443,"users": [{"id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8","encryption": "none","flow": "xtls-rprx-vision"}]}]},
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {"fingerprint": "chrome","publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg","serverName": "hls-svod.itunes.apple.com","shortId": "31","spiderX": "/"}
+        },
+        "tag": "proxy"
+      },
+      {"protocol": "freedom","tag": "direct"},
+      {"protocol": "blackhole","tag": "block"}
+    ],
+    "remarks": "🔒 Миша Царицанский    🇩🇪  Германия"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"servers": ["8.8.8.8"]},
+    "stats": {},
+    "policy": {"levels": {"8": {"handshake": 4,"connIdle": 300,"uplinkOnly": 2,"downlinkOnly": 5}},"system": {"statsOutboundUplink": true,"statsOutboundDownlink": true}},
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {"type": "field","domain": ["geosite:private","geosite:cn"],"outboundTag": "direct"},
+        {"type": "field","ip": ["geoip:private","geoip:cn"],"outboundTag": "direct"}
+      ]
+    },
+    "inbounds": [
+      {"port": 10808,"listen": "127.0.0.1","protocol": "socks","settings": {"auth": "noauth","udp": true},"sniffing": {"enabled": true,"destOverride": ["http","tls"]},"tag": "socks"},
+      {"port": 10809,"listen": "127.0.0.1","protocol": "http","tag": "http"}
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {"vnext": [{"address": "95.163.250.91","port": 443,"users": [{"id": "a1adf105-b92b-4a55-9211-936bf02dd16b","encryption":
+
+ "none","flow": "xtls-rprx-vision"}]}]},
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {"fingerprint": "chrome","publicKey": "4eL6bg6v8F-cmoS4--W4F1JAqujNO_xTmN1pxu5jaXg","serverName": "sun6-21.userapi.com","shortId": "2a280a2ccbe828a7"}
+        },
+        "tag": "proxy"
+      },
+      {"protocol": "freedom","tag": "direct"},
+      {"protocol": "blackhole","tag": "block"}
+    ],
+    "remarks": "🔒 Миша Царицанский ОБХОД БЕЛЫХ СПИСКОВ"
+  }
+]
