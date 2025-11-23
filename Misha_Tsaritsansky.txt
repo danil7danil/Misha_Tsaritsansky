@@ -96,13 +96,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "95.163.250.91",
+            "address": "us01-vlr01.tcp-reset-club.net",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
                 "flow": "xtls-rprx-vision",
-                "id": "a1adf105-b92b-4a55-9211-936bf02dd16b",
+                "id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8",
                 "level": 8
               }
             ]
@@ -114,10 +114,11 @@
         "realitySettings": {
           "allowInsecure": false,
           "fingerprint": "chrome",
-          "publicKey": "4eL6bg6v8F-cmoS4--W4F1JAqujNO_xTmN1pxu5jaXg",
-          "serverName": "sun6-21.userapi.com",
-          "shortId": "2a280a2ccbe828a7",
-          "show": false
+          "publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg",
+          "serverName": "hls-svod.itunes.apple.com",
+          "shortId": "f79448a30d",
+          "show": false,
+          "spiderX": "/"
         },
         "security": "reality",
         "tcpSettings": {
@@ -145,7 +146,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "🔒 Миша Царицанский ОБХОД БЕЛЫХ СПИСКОВ",
+  "remarks": "🔒 Миша Царицанский    🇺🇸 США",
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
@@ -168,10 +169,6 @@
     ]
   }
 }
-
-
-
-
 
 
 
@@ -355,8 +352,6 @@
 
 
 
-
-
 {
   "dns": {
     "hosts": {
@@ -455,13 +450,13 @@
       "settings": {
         "vnext": [
           {
-            "address": "us01-vlr01.tcp-reset-club.net",
+            "address": "95.163.250.91",
             "port": 443,
             "users": [
               {
                 "encryption": "none",
                 "flow": "xtls-rprx-vision",
-                "id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8",
+                "id": "a1adf105-b92b-4a55-9211-936bf02dd16b",
                 "level": 8
               }
             ]
@@ -473,11 +468,10 @@
         "realitySettings": {
           "allowInsecure": false,
           "fingerprint": "chrome",
-          "publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg",
-          "serverName": "hls-svod.itunes.apple.com",
-          "shortId": "f79448a30d",
-          "show": false,
-          "spiderX": "/"
+          "publicKey": "4eL6bg6v8F-cmoS4--W4F1JAqujNO_xTmN1pxu5jaXg",
+          "serverName": "sun6-21.userapi.com",
+          "shortId": "2a280a2ccbe828a7",
+          "show": false
         },
         "security": "reality",
         "tcpSettings": {
@@ -505,7 +499,7 @@
       "tag": "block"
     }
   ],
-  "remarks": "🔒 Миша Царицанский    🇺🇸 США",
+  "remarks": "🔒 Миша Царицанский ОБХОД БЕЛЫХ СПИСКОВ",
   "routing": {
     "domainStrategy": "AsIs",
     "rules": [
@@ -528,4 +522,6 @@
     ]
   }
 }
+
+
 
