@@ -1,0 +1,153 @@
+[
+  {
+    "log": { "loglevel": "warning" },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": { "auth": "noauth", "udp": true },
+        "sniffing": { "enabled": true, "destOverride": ["http", "tls"] },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "us01-vlr01.tcp-reset-club.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg",
+            "serverName": "hls-svod.itunes.apple.com",
+            "shortId": "f79448a30d",
+            "spiderX": "/"
+          }
+        },
+        "tag": "proxy"
+      },
+      { "protocol": "freedom", "tag": "direct" },
+      { "protocol": "blackhole", "tag": "block" }
+    ],
+    "routing": { "domainStrategy": "AsIs" },
+    "remarks": "Миша Царицанский    США"
+  },
+  {
+    "log": { "loglevel": "warning" },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": { "auth": "noauth", "udp": true },
+        "sniffing": { "enabled": true, "destOverride": ["http", "tls"] },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "de01-vlr01.tcp-reset-club.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "4ce2daa3-ab22-486f-a624-c9a10f40beb8",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg",
+            "serverName": "hls-svod.itunes.apple.com",
+            "shortId": "31",
+            "spiderX": "/"
+          }
+        },
+        "tag": "proxy"
+      },
+      { "protocol": "freedom", "tag": "direct" },
+      { "protocol": "blackhole", "tag": "block" }
+    ],
+    "routing": { "domainStrategy": "AsIs" },
+    "remarks": "Миша Царицанский    Германия"
+  },
+  {
+    "log": { "loglevel": "warning" },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": { "auth": "noauth", "udp": true },
+        "sniffing": { "enabled": true, "destOverride": ["http", "tls"] },
+        "tag": "socks"
+      },
+      {
+        "listen": "127.0.0.1",
+        "port": 10809,
+        "protocol": "http",
+        "tag": "http"
+      }
+    ],
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "95.163.250.91",
+              "port": 443,
+              "users": [
+                {
+                  "id": "a1adf105-b92b-4a55-9211-936bf02dd16b",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "fingerprint": "chrome",
+            "publicKey": "4eL6bg6v8F-cmoS4
