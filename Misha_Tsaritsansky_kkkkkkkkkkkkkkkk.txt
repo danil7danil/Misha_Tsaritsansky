@@ -1,8 +1,551 @@
-vless://a1adf105-b92b-4a55-9211-936bf02dd16b@95.163.250.91:443?security=reality&encryption=none&pbk=4eL6bg6v8F-cmoS4--W4F1JAqujNO_xTmN1pxu5jaXg&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=sun6-21.userapi.com&sid=2a280a2ccbe828a7#%F0%9F%94%92%20%D0%9C%D0%B8%D1%88%D0%B0%201%20%E2%9A%AB%20%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%BD%D0%B5%D1%82
-vless://4ce2daa3-ab22-486f-a624-c9a10f40beb8@ru01-blh02.tcp-reset-club.net:443?security=reality&encryption=none&pbk=mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=www.kinopoisk.ru&sid=f79448a30d#%F0%9F%94%92%20%D0%9C%D0%B8%D1%88%D0%B0%202%20%E2%9A%AB%20%20%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%BD%D0%B5%D1%82
-vless://4ce2daa3-ab22-486f-a624-c9a10f40beb8@ru01-blh03.tcp-reset-club.net:443?security=reality&encryption=none&pbk=mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=rutube.ru&sid=86e999a2cdc2#%F0%9F%94%92%20%D0%9C%D0%B8%D1%88%D0%B0%203%20%E2%9A%AB%20%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%BD%D0%B5%D1%82
-vless://4ce2daa3-ab22-486f-a624-c9a10f40beb8@ru01-blh04.tcp-reset-club.net:443?security=reality&encryption=none&pbk=mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=splitter.wb.ru&sid=48720c#%F0%9F%94%92%20%D0%9C%D0%B8%D1%88%D0%B0%204%20%E2%9A%AB%20%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%BD%D0%B5%D1%82
-vless://4ce2daa3-ab22-486f-a624-c9a10f40beb8@ru01-blh01.tcp-reset-club.net:443?security=reality&encryption=none&pbk=mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=stats.vk-portal.net&sid=8453e5fd9af927#%F0%9F%94%92%20%D0%9C%D0%B8%D1%88%D0%B0%205%20%E2%9A%AB%20%D0%A7%D0%B5%D0%B1%D1%83%D1%80%D0%BD%D0%B5%D1%82
+{
+  "remarks": "🔒 Миша 1 ⚫ Чебурнет ",
+  "dns": {
+    "port": 53,
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8",
+      {
+        "address": "77.88.8.8",
+        "domains": [
+          "geosite:category-ru"
+        ]
+      }
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "tag": "cand-01-oehe7y3qKn",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "yc178.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ads.x5.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "edge",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-02-YWr5Cg4Czz",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "auto.quattro-tech.ru",
+            "port": 8443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "auto.quattro-tech.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "qq",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-03-WoUseP02xA",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vk217d.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "sun6-21.userapi.com",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "qq",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-04-tY5lknN2ZD",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vk95.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "api-maps.yandex.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "edge",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "observatory": {
+    "enableConcurrency": true,
+    "probeInterval": "1m",
+    "probeUrl": "https://www.google.com/generate_204",
+    "subjectSelector": [
+      "cand-01-oehe7y3qKn",
+      "cand-02-YWr5Cg4Czz",
+      "cand-03-WoUseP02xA",
+      "cand-04-tY5lknN2ZD"
+    ]
+  },
+  "routing": {
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch",
+    "balancers": [
+      {
+        "tag": "bal_price",
+        "selector": [
+          "cand-02-YWr5Cg4Czz",
+          "cand-03-WoUseP02xA",
+          "cand-04-tY5lknN2ZD"
+        ],
+        "fallbackTag": "cand-01-oehe7y3qKn",
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "2s"
+            ],
+            "costs": [
+              {
+                "match": "cand-02-YWr5Cg4Czz",
+                "regexp": false,
+                "value": 0
+              },
+              {
+                "match": "cand-03-WoUseP02xA",
+                "regexp": false,
+                "value": 1000000000
+              },
+              {
+                "match": "cand-04-tY5lknN2ZD",
+                "regexp": false,
+                "value": 2000000000
+              }
+            ],
+            "expected": 1,
+            "maxRTT": "2s"
+          }
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "77.88.8.8"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "socks",
+          "http"
+        ],
+        "network": "tcp,udp",
+        "balancerTag": "bal_price"
+      }
+    ]
+  }
+}
+
+
+
+
+{
+  "remarks": "🔒 Миша 2 ⚫ Чебурнет",
+  "dns": {
+    "port": 53,
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8",
+      {
+        "address": "77.88.8.8",
+        "domains": [
+          "geosite:category-ru"
+        ]
+      }
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true,
+        "auth": "noauth"
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": false
+      },
+      "sniffing": {
+        "enabled": true,
+        "routeOnly": false,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "tag": "cand-01-uOg7Vl7bg6",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "yc51.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ads.x5.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "edge",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-02-KHxp3IIT9U",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "auto.quattro-tech.ru",
+            "port": 8443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "auto.quattro-tech.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "qq",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-03-noQBjD2xBd",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vk217d.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "sun6-21.userapi.com",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "qq",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "cand-04-S0skiBCm5Q",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "vk95.quattro-tech.ru",
+            "port": 443,
+            "users": [
+              {
+                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "api-maps.yandex.ru",
+          "shortId": "43dcff53849b81e6",
+          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "fingerprint": "edge",
+          "show": false
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    }
+  ],
+  "observatory": {
+    "enableConcurrency": true,
+    "probeInterval": "1m",
+    "probeUrl": "https://www.google.com/generate_204",
+    "subjectSelector": [
+      "cand-01-uOg7Vl7bg6",
+      "cand-02-KHxp3IIT9U",
+      "cand-03-noQBjD2xBd",
+      "cand-04-S0skiBCm5Q"
+    ]
+  },
+  "routing": {
+    "domainMatcher": "hybrid",
+    "domainStrategy": "IPIfNonMatch",
+    "balancers": [
+      {
+        "tag": "bal_price",
+        "selector": [
+          "cand-02-KHxp3IIT9U",
+          "cand-03-noQBjD2xBd",
+          "cand-04-S0skiBCm5Q"
+        ],
+        "fallbackTag": "cand-01-uOg7Vl7bg6",
+        "strategy": {
+          "type": "leastLoad",
+          "settings": {
+            "baselines": [
+              "2s"
+            ],
+            "costs": [
+              {
+                "match": "cand-02-KHxp3IIT9U",
+                "regexp": false,
+                "value": 0
+              },
+              {
+                "match": "cand-03-noQBjD2xBd",
+                "regexp": false,
+                "value": 1000000000
+              },
+              {
+                "match": "cand-04-S0skiBCm5Q",
+                "regexp": false,
+                "value": 2000000000
+              }
+            ],
+            "expected": 1,
+            "maxRTT": "2s"
+          }
+        }
+      }
+    ],
+    "rules": [
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "77.88.8.8"
+        ],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "inboundTag": [
+          "socks",
+          "http"
+        ],
+        "network": "tcp,udp",
+        "balancerTag": "bal_price"
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
