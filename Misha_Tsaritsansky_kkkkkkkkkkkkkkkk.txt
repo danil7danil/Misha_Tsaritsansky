@@ -1,539 +1,160 @@
-{
-  "remarks": "🔒 Миша 1 ⚫ Чебурнет ",
-  "dns": {
-    "port": 53,
-    "servers": [
-      "1.1.1.1",
-      "8.8.8.8",
-      {
-        "address": "77.88.8.8",
-        "domains": [
-          "geosite:category-ru"
-        ]
-      }
+[
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {
+      "port": 53,
+      "servers": ["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],
+      "queryStrategy": "UseIPv4"
+    },
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
     ],
-    "queryStrategy": "UseIPv4"
-  },
-  "inbounds": [
-    {
-      "tag": "socks",
-      "port": 10808,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "settings": {
-        "udp": true,
-        "auth": "noauth"
-      },
-      "sniffing": {
-        "enabled": true,
-        "routeOnly": false,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ]
-      }
-    },
-    {
-      "tag": "http",
-      "port": 10809,
-      "listen": "127.0.0.1",
-      "protocol": "http",
-      "settings": {
-        "allowTransparent": false
-      },
-      "sniffing": {
-        "enabled": true,
-        "routeOnly": false,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ]
-      }
-    }
-  ],
-  "log": {
-    "loglevel": "warning"
-  },
-  "outbounds": [
-    {
-      "tag": "cand-01-oehe7y3qKn",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "yc178.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ads.x5.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "edge",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-02-YWr5Cg4Czz",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "auto.quattro-tech.ru",
-            "port": 8443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "auto.quattro-tech.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "qq",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-03-WoUseP02xA",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "vk217d.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "sun6-21.userapi.com",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "qq",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-04-tY5lknN2ZD",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "vk95.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-maps.yandex.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "edge",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "direct",
-      "protocol": "freedom"
-    },
-    {
-      "tag": "block",
-      "protocol": "blackhole"
-    }
-  ],
-  "observatory": {
-    "enableConcurrency": true,
-    "probeInterval": "1m",
-    "probeUrl": "https://www.google.com/generate_204",
-    "subjectSelector": [
-      "cand-01-oehe7y3qKn",
-      "cand-02-YWr5Cg4Czz",
-      "cand-03-WoUseP02xA",
-      "cand-04-tY5lknN2ZD"
-    ]
-  },
-  "routing": {
-    "domainMatcher": "hybrid",
-    "domainStrategy": "IPIfNonMatch",
-    "balancers": [
-      {
-        "tag": "bal_price",
-        "selector": [
-          "cand-02-YWr5Cg4Czz",
-          "cand-03-WoUseP02xA",
-          "cand-04-tY5lknN2ZD"
-        ],
-        "fallbackTag": "cand-01-oehe7y3qKn",
-        "strategy": {
-          "type": "leastLoad",
-          "settings": {
-            "baselines": [
-              "2s"
-            ],
-            "costs": [
-              {
-                "match": "cand-02-YWr5Cg4Czz",
-                "regexp": false,
-                "value": 0
-              },
-              {
-                "match": "cand-03-WoUseP02xA",
-                "regexp": false,
-                "value": 1000000000
-              },
-              {
-                "match": "cand-04-tY5lknN2ZD",
-                "regexp": false,
-                "value": 2000000000
-              }
-            ],
-            "expected": 1,
-            "maxRTT": "2s"
-          }
-        }
-      }
+    "outbounds": [
+      {"tag":"cand-01-oehe7y3qKn","protocol":"vless","settings":{"vnext":[{"address":"yc178.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"ads.x5.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"cand-02-YWr5Cg4Czz","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"auto.quattro-tech.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-03-WoUseP02xA","protocol":"vless","settings":{"vnext":[{"address":"vk217d.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"sun6-21.userapi.com","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-04-tY5lknN2ZD","protocol":"vless","settings":{"vnext":[{"address":"vk95.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"api-maps.yandex.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"direct","protocol":"freedom"},
+      {"tag":"block","protocol":"blackhole"}
     ],
-    "rules": [
-      {
-        "type": "field",
-        "protocol": [
-          "bittorrent"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "ip": [
-          "77.88.8.8"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "socks",
-          "http"
-        ],
-        "network": "tcp,udp",
-        "balancerTag": "bal_price"
-      }
-    ]
-  }
-}
+    "observatory": {"enableConcurrency":true,"probeInterval":"1m","probeUrl":"https://www.google.com/generate_204","subjectSelector":["cand-01-oehe7y3qKn","cand-02-YWr5Cg4Czz","cand-03-WoUseP02xA","cand-04-tY5lknN2ZD"]},
+    "routing": {
+      "domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch",
+      "balancers": [{"tag":"bal_price","selector":["cand-02-YWr5Cg4Czz","cand-03-WoUseP02xA","cand-04-tY5lknN2ZD"],"fallbackTag":"cand-01-oehe7y3qKn","strategy":{"type":"leastLoad","settings":{"baselines":["2s"],"costs":[{"match":"cand-02-YWr5Cg4Czz","value":0},{"match":"cand-03-WoUseP02xA","value":1000000000},{"match":"cand-04-tY5lknN2ZD","value":2000000000}],"expected":1,"maxRTT":"2s"}}}],
+      "rules": [{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"},{"type":"field","inboundTag":["socks","http"],"network":"tcp,udp","balancerTag":"bal_price"}]
+    },
+    "remarks":"Миша 1 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"cand-01-uOg7Vl7bg6","protocol":"vless","settings":{"vnext":[{"address":"yc51.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"ads.x5.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"cand-02-KHxp3IIT9U","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"auto.quattro-tech.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-03-noQBjD2xBd","protocol":"vless","settings":{"vnext":[{"address":"vk217d.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"sun6-21.userapi.com","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-04-S0skiBCm5Q","protocol":"vless","settings":{"vnext":[{"address":"vk95.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"api-maps.yandex.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"direct","protocol":"freedom"},{"tag":"block","protocol":"blackhole"}
+    ],
+    "observatory": {"enableConcurrency":true,"probeInterval":"1m","probeUrl":"https://www.google.com/generate_204","subjectSelector":["cand-01-uOg7Vl7bg6","cand-02-KHxp3IIT9U","cand-03-noQBjD2xBd","cand-04-S0skiBCm5Q"]},
+    "routing": {
+      "domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch",
+      "balancers": [{"tag":"bal_price","selector":["cand-02-KHxp3IIT9U","cand-03-noQBjD2xBd","cand-04-S0skiBCm5Q"],"fallbackTag":"cand-01-uOg7Vl7bg6","strategy":{"type":"leastLoad","settings":{"baselines":["2s"],"costs":[{"match":"cand-02-KHxp3IIT9U","value":0},{"match":"cand-03-noQBjD2xBd","value":1000000000},{"match":"cand-04-S0skiBCm5Q","value":2000000000}],"expected":1,"maxRTT":"2s"}}}],
+      "rules": [{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"},{"type":"field","inboundTag":["socks","http"],"network":"tcp,udp","balancerTag":"bal_price"}]
+    },
+    "remarks":"Миша 2 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"cand-01-x8ZJhqWq5W","protocol":"vless","settings":{"vnext":[{"address":"ycruauto.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"ads.x5.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","show":false}}},
+      {"tag":"cand-02-kLhgaT7EQv","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"auto.quattro-tech.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-03-Wgm8WHpIk7","protocol":"vless","settings":{"vnext":[{"address":"vk217d.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"sun6-21.userapi.com","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-04-WJ25V8loE6","protocol":"vless","settings":{"vnext":[{"address":"vk95.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"api-maps.yandex.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"direct","protocol":"freedom"},{"tag":"block","protocol":"blackhole"}
+    ],
+    "observatory": {"enableConcurrency":true,"probeInterval":"1m","probeUrl":"https://www.google.com/generate_204","subjectSelector":["cand-01-x8ZJhqWq5W","cand-02-kLhgaT7EQv","cand-03-Wgm8WHpIk7","cand-04-WJ25V8loE6"]},
+    "routing": {
+      "domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch",
+      "balancers": [{"tag":"bal_price","selector":["cand-02-kLhgaT7EQv","cand-03-Wgm8WHpIk7","cand-04-WJ25V8loE6"],"fallbackTag":"cand-01-x8ZJhqWq5W","strategy":{"type":"leastLoad","settings":{"baselines":["2s"],"costs":[{"match":"cand-02-kLhgaT7EQv","value":0},{"match":"cand-03-Wgm8WHpIk7","value":1000000000},{"match":"cand-04-WJ25V8loE6","value":2000000000}],"expected":1,"maxRTT":"2s"}}}],
+      "rules": [{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"},{"type":"field","inboundTag":["socks","http"],"network":"tcp,udp","balancerTag":"bal_price"}]
+    },
+    "remarks":"Миша 3 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"cand-01-581ozdGd0o","protocol":"vless","settings":{"vnext":[{"address":"vk217d.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"sun6-21.userapi.com","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-02-l8pHJrd7ll","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"auto.quattro-tech.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"direct","protocol":"freedom"},{"tag":"block","protocol":"blackhole"}
+    ],
+    "observatory": {"enableConcurrency":true,"probeInterval":"1m","probeUrl":"https://www.google.com/generate_204","subjectSelector":["cand-01-581ozdGd0o","cand-02-l8pHJrd7ll"]},
+    "routing": {
+      "domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch",
+      "balancers": [{"tag":"bal_price","selector":["cand-02-l8pHJrd7ll"],"fallbackTag":"cand-01-581ozdGd0o","strategy":{"type":"leastLoad","settings":{"baselines":["2s"],"costs":[{"match":"cand-02-l8pHJrd7ll","value":0}],"expected":1,"maxRTT":"2s"}}}],
+      "rules": [{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"},{"type":"field","inboundTag":["socks","http"],"network":"tcp,udp","balancerTag":"bal_price"}]
+    },
+    "remarks":"Миша 4 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"cand-01-FNE3NN2xgy","protocol":"vless","settings":{"vnext":[{"address":"yc84.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"ads.x5.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"cand-02-D5o64CZYNr","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"auto.quattro-tech.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-03-fSxrdsKum8","protocol":"vless","settings":{"vnext":[{"address":"vk217d.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"sun6-21.userapi.com","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","show":false}}},
+      {"tag":"cand-04-AlLaFGlaHi","protocol":"vless","settings":{"vnext":[{"address":"vk95.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"api-maps.yandex.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"direct","protocol":"freedom"},{"tag":"block","protocol":"blackhole"}
+    ],
+    "observatory": {"enableConcurrency":true,"probeInterval":"1m","probeUrl":"https://www.google.com/generate_204","subjectSelector":["cand-01-FNE3NN2xgy","cand-02-D5o64CZYNr","cand-03-fSxrdsKum8","cand-04-AlLaFGlaHi"]},
+    "routing": {
+      "domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch",
+      "balancers": [{"tag":"bal_price","selector":["cand-02-D5o64CZYNr","cand-03-fSxrdsKum8","cand-04-AlLaFGlaHi"],"fallbackTag":"cand-01-FNE3NN2xgy","strategy":{"type":"leastLoad","settings":{"baselines":["2s"],"costs":[{"match":"cand-02-D5o64CZYNr","value":0},{"match":"cand-03-fSxrdsKum8","value":1000000000},{"match":"cand-04-AlLaFGlaHi","value":2000000000}],"expected":1,"maxRTT":"2s"}}}],
+      "rules": [{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"},{"type":"field","inboundTag":["socks","http"],"network":"tcp,udp","balancerTag":"bal_price"}]
+    },
+    "remarks":"Миша 5 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"217.16.20.40","port":1443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none"}]}]},"streamSettings":{"network":"grpc","security":"reality","grpcSettings":{"serviceName":"ozon"},"realitySettings":{"serverName":"ozon.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"qq","spiderX":"/","show":false}}},
+      {"tag":"direct","protocol":"freedom"},{"tag":"block","protocol":"blackhole"}
+    ],
+    "routing": {"domainMatcher":"hybrid","domainStrategy":"IPIfNonMatch","rules":[{"type":"field","protocol":["bittorrent"],"outboundTag":"direct"},{"ip":["77.88.8.8"],"outboundTag":"direct"}]},
+    "remarks":"Миша 6 ⚫ Чебурнет"
+  },
+  {
+    "log": {"loglevel": "warning"},
+    "dns": {"port":53,"servers":["1.1.1.1","8.8.8.8",{"address":"77.88.8.8","domains":["geosite:category-ru"]}],"queryStrategy":"UseIPv4"},
+    "stats": {},
+    "policy": {"levels":{"8":{"handshake":4,"connIdle":300,"uplinkOnly":2,"downlinkOnly":5}},"system":{"statsOutboundUplink":true,"statsOutboundDownlink":true}},
+    "inbounds": [
+      {"tag":"socks","port":10808,"listen":"127.0.0.1","protocol":"socks","settings":{"udp":true,"auth":"noauth"},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}},
+      {"tag":"http","port":10809,"listen":"127.0.0.1","protocol":"http","settings":{"allowTransparent":false},"sniffing":{"enabled":true,"destOverride":["http","tls","quic"]}}
+    ],
+    "outbounds": [
+      {"tag":"cand-01-RDzpZhAt0m","protocol":"vless","settings":{"vnext":[{"address":"vk95.quattro-tech.ru","port":443,"users":[{"id":"9fc86489-e501-4b22-88b5-d91fc0f66c83","encryption":"none","flow":"xtls-rprx-vision"}]}]},"streamSettings":{"network":"tcp","security":"reality","realitySettings":{"serverName":"api-maps.yandex.ru","shortId":"43dcff53849b81e6","publicKey":"10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc","fingerprint":"edge","show":false}}},
+      {"tag":"cand-02-aCWEaK3t2a","protocol":"vless","settings":{"vnext":[{"address":"auto.quattro-tech.ru","port":8443,"users":[{"id":"9fc86489-
 
 
 
 
-{
-  "remarks": "🔒 Миша 2 ⚫ Чебурнет",
-  "dns": {
-    "port": 53,
-    "servers": [
-      "1.1.1.1",
-      "8.8.8.8",
-      {
-        "address": "77.88.8.8",
-        "domains": [
-          "geosite:category-ru"
-        ]
-      }
-    ],
-    "queryStrategy": "UseIPv4"
-  },
-  "inbounds": [
-    {
-      "tag": "socks",
-      "port": 10808,
-      "listen": "127.0.0.1",
-      "protocol": "socks",
-      "settings": {
-        "udp": true,
-        "auth": "noauth"
-      },
-      "sniffing": {
-        "enabled": true,
-        "routeOnly": false,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ]
-      }
-    },
-    {
-      "tag": "http",
-      "port": 10809,
-      "listen": "127.0.0.1",
-      "protocol": "http",
-      "settings": {
-        "allowTransparent": false
-      },
-      "sniffing": {
-        "enabled": true,
-        "routeOnly": false,
-        "destOverride": [
-          "http",
-          "tls",
-          "quic"
-        ]
-      }
-    }
-  ],
-  "log": {
-    "loglevel": "warning"
-  },
-  "outbounds": [
-    {
-      "tag": "cand-01-uOg7Vl7bg6",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "yc51.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "ads.x5.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "edge",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-02-KHxp3IIT9U",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "auto.quattro-tech.ru",
-            "port": 8443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "auto.quattro-tech.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "qq",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-03-noQBjD2xBd",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "vk217d.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "sun6-21.userapi.com",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "qq",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "cand-04-S0skiBCm5Q",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "vk95.quattro-tech.ru",
-            "port": 443,
-            "users": [
-              {
-                "id": "9fc86489-e501-4b22-88b5-d91fc0f66c83",
-                "encryption": "none",
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "api-maps.yandex.ru",
-          "shortId": "43dcff53849b81e6",
-          "publicKey": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "fingerprint": "edge",
-          "show": false
-        }
-      }
-    },
-    {
-      "tag": "direct",
-      "protocol": "freedom"
-    },
-    {
-      "tag": "block",
-      "protocol": "blackhole"
-    }
-  ],
-  "observatory": {
-    "enableConcurrency": true,
-    "probeInterval": "1m",
-    "probeUrl": "https://www.google.com/generate_204",
-    "subjectSelector": [
-      "cand-01-uOg7Vl7bg6",
-      "cand-02-KHxp3IIT9U",
-      "cand-03-noQBjD2xBd",
-      "cand-04-S0skiBCm5Q"
-    ]
-  },
-  "routing": {
-    "domainMatcher": "hybrid",
-    "domainStrategy": "IPIfNonMatch",
-    "balancers": [
-      {
-        "tag": "bal_price",
-        "selector": [
-          "cand-02-KHxp3IIT9U",
-          "cand-03-noQBjD2xBd",
-          "cand-04-S0skiBCm5Q"
-        ],
-        "fallbackTag": "cand-01-uOg7Vl7bg6",
-        "strategy": {
-          "type": "leastLoad",
-          "settings": {
-            "baselines": [
-              "2s"
-            ],
-            "costs": [
-              {
-                "match": "cand-02-KHxp3IIT9U",
-                "regexp": false,
-                "value": 0
-              },
-              {
-                "match": "cand-03-noQBjD2xBd",
-                "regexp": false,
-                "value": 1000000000
-              },
-              {
-                "match": "cand-04-S0skiBCm5Q",
-                "regexp": false,
-                "value": 2000000000
-              }
-            ],
-            "expected": 1,
-            "maxRTT": "2s"
-          }
-        }
-      }
-    ],
-    "rules": [
-      {
-        "type": "field",
-        "protocol": [
-          "bittorrent"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "ip": [
-          "77.88.8.8"
-        ],
-        "outboundTag": "direct"
-      },
-      {
-        "type": "field",
-        "inboundTag": [
-          "socks",
-          "http"
-        ],
-        "network": "tcp,udp",
-        "balancerTag": "bal_price"
-      }
-    ]
-  }
-}
+
 
 
 
